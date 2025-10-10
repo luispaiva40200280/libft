@@ -1,4 +1,4 @@
-# 🧩 libft — Your First Custom C Library  
+# 🧩 libft — 42 First Project C Library 
 
 > “Because writing your own standard library makes you a better C developer.”  
 
