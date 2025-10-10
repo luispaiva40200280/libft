@@ -6,11 +6,11 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:51:22 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/10 18:59:02 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/10 19:00:14 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned chars c)
+int	ft_isascii(unsigned char c)
 {
 	if (c <= 127)
 		return (1);
