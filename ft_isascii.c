@@ -6,13 +6,15 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:51:22 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/14 18:59:16 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/14 23:13:29 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned char c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

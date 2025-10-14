@@ -6,7 +6,7 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 19:26:55 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/14 19:43:33 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/14 20:27:48 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
+	while (n--)
+		*str++ = 0;
 }

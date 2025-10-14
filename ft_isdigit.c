@@ -6,13 +6,15 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 18:23:28 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/14 17:15:22 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/14 23:07:13 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int numb)
+#include "libft.h"
+
+int	ft_isdigit(int n)
 {
-	if (numb >= 0 && numb <= 9)
+	if (n >= '0' && n <= '9')
 		return (1);
 	return (0);
 }

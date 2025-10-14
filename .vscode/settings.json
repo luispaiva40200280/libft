@@ -1,4 +1,7 @@
 {
 	"makefile.configureOnOpen": false,
-	"C_Cpp.dimInactiveRegions": false
+	"C_Cpp.dimInactiveRegions": false,
+	"files.associations": {
+		"libft.h": "c"
+	}
 }
