@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 18:51:22 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/14 18:59:16 by lpaiva           ###   ########.fr       */
+/*   Created: 2025/10/14 15:54:49 by lpaiva            #+#    #+#             */
+/*   Updated: 2025/10/14 19:32:13 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned char c)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	if (c <= 127)
-		return (1);
-	return (0);
+	size_t	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
