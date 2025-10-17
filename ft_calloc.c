@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaiva <lpaiva@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 21:51:16 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/17 17:55:25 by lpaiva           ###   ########.fr       */
+/*   Created: 2025/10/17 18:54:13 by lpaiva            #+#    #+#             */
+/*   Updated: 2025/10/17 22:02:09 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	const char	*str_b;
-	const char	*str_l;
-	size_t		n_comp;
+	char	*ptr;
+	size_t	total;
 
-	if (!*little)
-		return ((char *)big);
-	while (*big && len)
-	{
-		str_l = little;
-		str_b = big;
-		n_comp = len;
-		while (*str_l && n_comp && *str_b == *str_l)
-		{
-			str_b++;
-			str_l++;
-			n_comp--;
-		}
-		if (!*str_l)
-			return ((char *)(big));
-		big++;
-		len--;
-	}
-	return (NULL);
+	if (!nmemb || !size)
+		return (malloc(0));
+	total = nmemb * size;
+	if (total > SIZE_MAX)
+		return (NULL);
+	ptr = malloc(total);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, total);
+	return (ptr);
 }

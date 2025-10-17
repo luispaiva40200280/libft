@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaiva <lpaiva@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 21:51:16 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/17 17:55:25 by lpaiva           ###   ########.fr       */
+/*   Created: 2025/10/17 18:54:45 by lpaiva            #+#    #+#             */
+/*   Updated: 2025/10/17 20:53:53 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strdup(const char *s)
 {
-	const char	*str_b;
-	const char	*str_l;
-	size_t		n_comp;
+	char	*dupstr;
+	size_t	len;
 
-	if (!*little)
-		return ((char *)big);
-	while (*big && len)
+	len = ft_strlen(s);
+	dupstr = malloc(len + 1);
+	if (!dupstr)
+		return (NULL);
+	while (*s)
 	{
-		str_l = little;
-		str_b = big;
-		n_comp = len;
-		while (*str_l && n_comp && *str_b == *str_l)
-		{
-			str_b++;
-			str_l++;
-			n_comp--;
-		}
-		if (!*str_l)
-			return ((char *)(big));
-		big++;
-		len--;
+		*dupstr = *s;
+		s++;
+		dupstr++;
 	}
-	return (NULL);
+	*dupstr = '\0';
+	return (dupstr - len);
 }
