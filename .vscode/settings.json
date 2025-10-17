@@ -4,5 +4,8 @@
 	"files.associations": {
 		"libft.h": "c"
 	},
-	"C_Cpp.errorSquiggles": "disabled"
+	"C_Cpp.errorSquiggles": "disabled",
+	"C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+		"clang-analyzer-core.uninitialized.Branch"
+	]
 }
