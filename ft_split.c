@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 18:54:45 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/18 19:25:31 by lpaiva           ###   ########.fr       */
+/*   Created: 2025/10/18 19:03:22 by lpaiva            #+#    #+#             */
+/*   Updated: 2025/10/18 19:28:14 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	**ft_split(char const *s, char c)
 {
-	char	*dupstr;
-	size_t	len;
-
-	len = ft_strlen(s);
-	dupstr = malloc(len + 1);
-	if (!dupstr)
-		return (NULL);
-	while (*s)
-	{
-		*dupstr = *s;
-		s++;
-		dupstr++;
-	}
-	*dupstr = '\0';
-	return (dupstr - len);
+	char	**result;
+	
+	return (result);
 }

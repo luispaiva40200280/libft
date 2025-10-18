@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 22:49:34 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/18 16:22:18 by lpaiva           ###   ########.fr       */
+/*   Created: 2025/10/18 16:49:00 by lpaiva            #+#    #+#             */
+/*   Updated: 2025/10/18 18:43:28 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*sub;
-	size_t	len_s;
-	size_t	i;
+	size_t		len_s1;
+	size_t		len_s2;
+	char		*new_str;
 
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	len_s = ft_strlen(s);
-	if (start >= len_s)
-		return (ft_strdup(""));
-	if (len > len_s - start)
-		len = len_s - start;
-	sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (!sub)
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	new_str = (char *)malloc(len_s1 + len_s2 + 1);
+	if (!new_str)
 		return (NULL);
-	i = 0;
-	while (s[start + i] && i < len)
-	{
-		sub[i] = s[start + i];
-		i++;
-	}
-	sub[i] = '\0';
-	return (sub);
+	ft_memcpy(new_str, s1, len_s1);
+	ft_memcpy(new_str + len_s1, s2, len_s2);
+	new_str[len_s1 + len_s2] = '\0';
+	return (new_str);
 }
