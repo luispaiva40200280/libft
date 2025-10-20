@@ -6,7 +6,7 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:37:16 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/20 18:14:17 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/20 19:51:58 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,9 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int i);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
