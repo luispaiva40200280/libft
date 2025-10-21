@@ -6,7 +6,7 @@
 /*   By: lpaiva <lpaiva@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:37:16 by lpaiva            #+#    #+#             */
-/*   Updated: 2025/10/21 00:45:33 by lpaiva           ###   ########.fr       */
+/*   Updated: 2025/10/21 23:04:24 by lpaiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 t_list				*ft_lstnew(void *content);
+t_list				*ft_lstlast(t_list *lst);
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 int					ft_lstsize(t_list *lst);
+void				ft_lstclear(t_list **lst, void (*del)(void *));
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
