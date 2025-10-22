@@ -79,6 +79,7 @@ Extended functionality for dynamic string handling, conversions, and file descri
 In the **bonus section**, you’ll create a small linked list library to manage generic content dynamically.  
 These functions will allow creating, iterating, mapping, and freeing `t_list` structures safely.
 
+✅ **Status:** All bonus functions fully implemented and verified.
 ### 📘 Bonus Prototypes
 
 ```c
